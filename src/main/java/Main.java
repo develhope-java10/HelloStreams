@@ -4,14 +4,16 @@ import java.util.stream.Collectors;
 public class Main {
     public static void main(String[] args) {
         List<String> names = List.of("Tommaso", "Giulia", "Federico", "Giada", "Eduard", "Tommaso", "Giulia");
-        List<String> result = names.stream()
-                //.filter(Main::endsWithA)
-                //.map(String::length)
-                .distinct()
-                .map(Main::upperCase)
+        List<Integer> lengths = names.stream()
+                .map(name -> name.length())
+
                 .collect(Collectors.toList());
 
-        System.out.println(result);
+
+
+
+
+        System.out.println(lengths);
 
     }
     public static String upperCase (String name){
